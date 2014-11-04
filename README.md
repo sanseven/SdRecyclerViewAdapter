@@ -5,19 +5,16 @@ wrapper class for RecyclerView Adapter
 
 we dont have to create a new adapter each time, instead create an item with/without viewholder.
 
-sample:
 
 =================
 MainAcitvity.java
 ==================
-...
 SdRecyclerViewAdapter adapter = new SdRecyclerViewAdapter();
 
 adapter.add(new ItemA());
 adapter.add(new ItemB());
 
 recyclerView.setAdapter(adapter);
-...
 
 ============
 ItemA.java
