@@ -3,7 +3,7 @@ SdRecyclerViewAdapter
 
 wrapper class for RecyclerView Adapter
 
-we dont have to create a new adapter each time, instead create an item with/without viewholder.
+we dont have to create a new type of adapter each time, instead use SdRecyclerViewAdapter and create a new item type with/without viewholder.
 
 <b>MainActivity.java</b>
 ```java
