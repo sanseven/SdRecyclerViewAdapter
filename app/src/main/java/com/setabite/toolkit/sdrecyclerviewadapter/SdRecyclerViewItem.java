@@ -4,8 +4,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import java.util.Random;
-
 /**
  * Created by Sangga on 11/4/2014.
  * <p/>
@@ -13,11 +11,11 @@ import java.util.Random;
  */
 public abstract class SdRecyclerViewItem<T extends SdRecyclerViewAdapter.ViewHolder> implements SdRecyclerViewItemInterface<T> {
 
-    private int mTypeId = new Random().nextInt((int) (System.currentTimeMillis()));
+//    private int mTypeId = new Random().nextInt((int) (System.currentTimeMillis()));
 
     @Override
     public int getTypeId() {
-        return mTypeId;
+        return this.getClass().hashCode();
     }
 
     @Override
