@@ -45,10 +45,10 @@ public class MainActivity extends ActionBarActivity {
             return R.layout.item_a;
         }
 
-        @Override
-        protected ViewHolder onCreateViewHolder(View view) {
-            return new ViewHolder(view, (TextView)view.findViewById(R.id.textview));
-        }
+//        @Override
+//        protected ViewHolder onCreateViewHolder(View view) {
+//            return new ViewHolder(view, (TextView)view.findViewById(R.id.textview));
+//        }
 
         @Override
         protected void onPopulateViewHolder(ViewHolder holder) {
@@ -57,9 +57,9 @@ public class MainActivity extends ActionBarActivity {
 
         public class ViewHolder extends SdRecyclerViewAdapter.ViewHolder {
             public TextView mTextView;
-            public ViewHolder(View itemView, TextView textView) {
+            public ViewHolder(View itemView) {
                 super(itemView);
-                this.mTextView = textView;
+                this.mTextView = (TextView)itemView.findViewById(R.id.textview);
             }
         }
     }
@@ -78,7 +78,7 @@ public class MainActivity extends ActionBarActivity {
             View view = LayoutInflater.from(parent.getContext())
                     .inflate(R.layout.item_b, parent, false);
 
-            return new ViewHolder(view, (TextView)view.findViewById(R.id.textview));
+            return new ViewHolder(view);
         }
 
         @Override
@@ -89,9 +89,9 @@ public class MainActivity extends ActionBarActivity {
 
         public class ViewHolder extends SdRecyclerViewAdapter.ViewHolder {
             public TextView mTextView;
-            public ViewHolder(View itemView, TextView textView) {
+            public ViewHolder(View itemView) {
                 super(itemView);
-                this.mTextView = textView;
+                this.mTextView = (TextView)itemView.findViewById(R.id.textview);
             }
         }
     }

@@ -12,7 +12,7 @@ import java.util.Random;
  */
 public abstract class SdRecyclerViewItemSimple implements SdRecyclerViewItemInterface<SdRecyclerViewItemSimple.ViewHolder> {
 
-    private int mTypeId = new Random().nextInt((int) (System.currentTimeMillis()));
+    private int mTypeId = new Random().nextInt(((int) (System.currentTimeMillis()) <= 0) ? 1 : (int) (System.currentTimeMillis()));
 
     @Override
     public int getTypeId() {
